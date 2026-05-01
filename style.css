@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #111;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
+.header {
+  background: black;
+  padding: 15px 30px;
+}
+
+.logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 42px;
+  letter-spacing: 3px;
+  color: #e50914;
+  text-shadow: 0 0 10px rgba(229, 9, 20, 0.4);
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.08);
+  letter-spacing: 5px;
+  text-shadow: 0 0 18px rgba(229, 9, 20, 0.8);
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), #111),
+              url("https://images.unsplash.com/photo-1490645935967-10de6ba17061");
+  background-size: cover;
+  padding: 80px 30px;
+}
+
+.hero h2 {
+  font-size: 38px;
+  animation: slideUp 0.8s ease;
+}
+
+.hero p {
+  color: #ccc;
+}
+
+@keyframes slideUp {
+  from {opacity:0; transform: translateY(20px);}
+  to {opacity:1; transform: translateY(0);}
+}
+
+/* Container */
+.container {
+  padding: 20px 30px;
+}
+
+/* Search */
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: none;
+  width: 220px;
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 16px;
+  background: #e50914;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background: #b20710;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* Row */
+.row {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  scroll-snap-type: x mandatory;
+}
+
+.row::-webkit-scrollbar {
+  display: none;
+}
+
+/* Cards */
+.meal {
+  position: relative;
+  min-width: 180px;
+  scroll-snap-align: start;
+  cursor: pointer;
+  animation: fadeIn 0.4s ease;
+}
+
+.meal img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* Hover zoom */
+.meal:hover {
+  transform: scale(1.1);
+  z-index: 5;
+}
+
+/* Overlay title */
+.meal::after {
+  content: attr(data-title);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.meal:hover::after {
+  opacity: 1;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from {opacity:0; transform: translateY(10px);}
+  to {opacity:1; transform: translateY(0);}
+}
+
+/* Single Meal */
+.single-meal {
+  margin-top: 30px;
+}
+
+.single-meal img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.meal-details {
+  margin-top: 20px;
+  max-width: 600px;
+}
+
+.meal-details ul {
+  padding-left: 20px;
+  color: #ddd;
+}
+
+.steps li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.single-meal h3 {
+  margin-top: 20px;
+  color: #e50914;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MealFlix</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <h1 class="logo">MealFlix</h1>
+</header>
+
+<section class="hero">
+  <h2>Discover Delicious Meals</h2>
+  <p>Browse recipes like Netflix</p>
+</section>
+
+<div class="container">
+
+  <div class="search-box">
+    <form id="submit">
+      <input type="text" id="search" placeholder="Search meals..." />
+      <button type="submit" class="btn">Search</button>
+    </form>
+
+    <button id="random" class="btn random-btn"> Random</button>
+  </div>
+
+  <h2 id="result-heading"></h2>
+
+  <div id="meals" class="row"></div>
+
+  <div id="single-meal"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
